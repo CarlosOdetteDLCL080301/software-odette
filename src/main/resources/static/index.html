@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Odette</title>
+    <!-- Meta para responsividad -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Bienvenido a Software Odette</h1>
+<ul id="item-list">
+    <!-- Aquí se mostrarán los items traídos de la API -->
+</ul>
+
+<script>
+    // Al cargar la página, pedimos la lista de items al backend
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('/api/items')               // Llama al endpoint REST
+        .then(response => response.json())  // Convierte la respuesta a JSON
+        .then(data => {
+          const ul = document.getElementById('item-list');
+          data.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item.name;  // Muestra el nombre de cada item
+            ul.appendChild(li);
+          });
+        })
+        .catch(err => console.error('Error al cargar items:', err));
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+version: '3.8'  # Versión de sintaxis de Docker Compose
+
+services:
+  db:
+    image: postgres:15                 # Usa PostgreSQL 15 (estable)
+    restart: always                    # Reinicia si falla
+    environment:
+      # Nombre de la base de datos
+      POSTGRES_DB: bd_web_software_odette
+      # Usuario y contraseña para conectar desde la app
+      POSTGRES_USER: odette
+      POSTGRES_PASSWORD: odette_password
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Persistencia de datos
+    ports:
+      - "5432:5432"                       # Mapea puerto local 5432
+
+  app:
+    build: .                           # Construye usando el Dockerfile
+    depends_on:
+      - db                            # Espera a que 'db' esté arriba
+    environment:
+      # Variables que Spring Boot leerá para configurar la conexión
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/bd_web_software_odette
+      SPRING_DATASOURCE_USERNAME: odette
+      SPRING_DATASOURCE_PASSWORD: odette_password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    ports:
+      - "8080:8080"                   # Exponer la app en localhost:8080
+
+volumes:
+  db_data: {}  # Volumen nombrado para PostgreSQL
