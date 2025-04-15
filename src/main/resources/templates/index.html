@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Odette De La Cruz López | Portfolio</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap icons via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS de este modulo -->
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="bg-gray-100">
+<!-- Cursor personalizado -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- Header y Navegación -->
+<!-- La barra de navegación es fija en la parte superior y contiene los enlaces a las diferentes secciones -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo o nombre -->
+            <a href="#home" class="text-xl font-bold portfolio-text-primary">Carlos Odette</a>
+
+            <!-- Menú de navegación para pantallas medianas y grandes -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="portfolio-nav-link">Home</a>
+                <a href="#work" class="portfolio-nav-link">Work</a>
+                <a href="#about" class="portfolio-nav-link">About</a>
+                <a href="#contact" class="portfolio-nav-link">Contact Me</a>
+            </div>
+
+            <!-- Botón de menú para móviles -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú móvil (oculto por defecto) -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="py-2 portfolio-nav-link">Home</a>
+                <a href="#work" class="py-2 portfolio-nav-link">Work</a>
+                <a href="#about" class="py-2 portfolio-nav-link">About</a>
+                <a href="#contact" class="py-2 portfolio-nav-link">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Sección Hero / Home -->
+<!-- Esta sección es la primera que ve el usuario, contiene una presentación breve y llamativa -->
+<section id="home" class="py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Carlos Odette De La Cruz López</h1>
+                <h2 class="text-2xl md:text-3xl mb-6">Ingeniero en Computación</h2>
+                <p class="text-lg mb-8">Desarrollador web con experiencia en automatización de procesos y gestión de
+                    servidores. Apasionado por la optimización de sistemas y la implementación de soluciones
+                    tecnológicas eficientes.</p>
+                <div class="flex space-x-4">
+                    <a href="#work"
+                       class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 transition duration-300">Ver
+                        Proyectos</a>
+                    <a href="#contact"
+                       class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Contactar</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <!-- Aquí puedes agregar una imagen de perfil o una ilustración -->
+                <div class="w-64 h-64 rounded-full bg-white p-2">
+                    <div class="w-full h-full rounded-full bg-gray-300 flex items-center justify-center">
+                        <i class="fas fa-user-circle text-8xl text-gray-500"></i>
+                        <!-- Reemplazar con: <img src="img/profile.jpg" alt="Carlos Odette" class="w-full h-full rounded-full object-cover"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Experiencia Profesional -->
+<!-- Esta sección muestra la experiencia laboral del usuario de manera cronológica -->
+<section id="work" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Experiencia Profesional</h2>
+
+        <!-- Timeline de experiencia -->
+        <div class="relative">
+            <!-- Línea vertical del timeline -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+
+            <!-- Experiencia 1 -->
+            <div class="relative mb-16">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -mt-3">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-white"></div>
+                </div>
+                <div class="ml-4 md:ml-0 md:w-5/12 md:mr-auto md:pr-8">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Becario de Desarrollo Web</h3>
+                        <h4 class="text-lg font-semibold mb-2 text-blue-600">ImpulsaBTL</h4>
+                        <p class="text-gray-600 mb-2">Gustavo A. Madero, CDMX | Enero 2024–Actualidad</p>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>Mantener y optimizar la página web de la empresa.</li>
+                            <li>Mejorar la responsividad y funcionalidad del sistema.</li>
+                            <li>Automatizar el cálculo de nómina del personal.</li>
+                            <li>Implementar control de asistencia para choferes mediante medidas antifraude.</li>
+                            <li>Desarrollar carga masiva de datos para bitácoras.</li>
+                            <li>Gestionar pagos de hosting y correos institucionales.</li>
+                            <li>Configurar campañas en Google Ads.</li>
+                            <li>Implementar un módulo tipo carrito de ventas para registrar transacciones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencia 2 -->
+            <div class="relative mb-16">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -mt-3">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-white"></div>
+                </div>
+                <div class="ml-4 md:ml-auto md:w-5/12 md:pl-8">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Desarrollador Web Freelance</h3>
+                        <h4 class="text-lg font-semibold mb-2 text-blue-600">Desarrollos Estructurales Cajero</h4>
+                        <p class="text-gray-600 mb-2">Gustavo A. Madero, CDMX | Diciembre 2024-Actualidad</p>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>Diseño y desarrollo de página web corporativa.</li>
+                            <li>Integración de catálogo de servicios para contratistas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencia 3 -->
+            <div class="relative mb-16">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -mt-3">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-white"></div>
+                </div>
+                <div class="ml-4 md:ml-0 md:w-5/12 md:mr-auto md:pr-8">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Automatización de Procesos</h3>
+                        <h4 class="text-lg font-semibold mb-2 text-blue-600">Empresa Confidencial</h4>
+                        <p class="text-gray-600 mb-2">Azcapotzalco, CDMX | Mayo 2024</p>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>Desarrollo de scripts en VBA para automatizar emisión de tickets en Excel.</li>
+                            <li>Reducción de tiempos de procesamiento de 4 horas a minutos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiencia 4 -->
+            <div class="relative mb-16">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -mt-3">
+                    <div class="w-6 h-6 rounded-full bg-blue-500 border-4 border-white"></div>
+                </div>
+                <div class="ml-4 md:ml-auto md:w-5/12 md:pl-8">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">Servicio Social</h3>
+                        <h4 class="text-lg font-semibold mb-2 text-blue-600">FILMOTECA UNAM</h4>
+                        <p class="text-gray-600 mb-2">Coyoacan, CDMX | Septiembre 2023 – Marzo 2024</p>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>Gestión de inventario de equipos y licencias.</li>
+                            <li>Desarrollo de mejoras en software interno.</li>
+                            <li>Implementación de copias de seguridad en cintas LTO.</li>
+                            <li>Capacitación en Git, Docker, Python y Spring Boot.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Proyectos -->
+        <div class="mt-20">
+            <h2 class="text-3xl font-bold mb-12 text-center">Proyectos Destacados</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 (placeholder) -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <i class="fas fa-code text-5xl text-gray-500"></i>
+                        <!-- Reemplazar con: <img src="img/project1.jpg" alt="Proyecto 1" class="w-full h-full object-cover"> -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sistema de Nómina Automatizado</h3>
+                        <p class="text-gray-700 mb-4">Desarrollo de un sistema automatizado para el cálculo de nómina,
+                            reduciendo errores y tiempo de procesamiento.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                        <a href="#"
+                           class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Ver
+                            Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 (placeholder) -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-5xl text-gray-500"></i>
+                        <!-- Reemplazar con: <img src="img/project2.jpg" alt="Proyecto 2" class="w-full h-full object-cover"> -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Página Web Corporativa</h3>
+                        <p class="text-gray-700 mb-4">Diseño y desarrollo de sitio web responsivo para empresa de
+                            construcción, incluyendo catálogo de servicios.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                        <a href="#"
+                           class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Ver
+                            Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 (placeholder) -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <i class="fas fa-robot text-5xl text-gray-500"></i>
+                        <!-- Reemplazar con: <img src="img/project3.jpg" alt="Proyecto 3" class="w-full h-full object-cover"> -->
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Automatización con VBA</h3>
+                        <p class="text-gray-700 mb-4">Script de automatización para procesamiento de datos y generación
+                            de reportes en Excel, reduciendo tiempos operativos.</p>
+                        <div class="flex flex-wrap mb-4">
+                            <span class="skill-tag">VBA</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">Automatización</span>
+                        </div>
+                        <a href="#"
+                           class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Ver
+                            Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Sobre Mí -->
+<!-- Esta sección proporciona información personal, educación y habilidades -->
+<section id="about" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Sobre Mí</h2>
+
+        <div class="flex flex-col md:flex-row">
+            <!-- Información personal -->
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                <h3 class="text-2xl font-bold mb-4">¿Quién soy?</h3>
+                <p class="text-gray-700 mb-6">
+                    Estudiante en el último semestre de Ingeniería en Computación en la Facultad de Ingeniería de la
+                    UNAM. Con experiencia en desarrollo web, automatización de procesos y gestión de servidores.
+                    Apasionado por la optimización de sistemas y la implementación de soluciones tecnológicas
+                    eficientes. Habilidad para adaptarse a estructuras de software preexistentes y mejorar su
+                    funcionalidad.
+                </p>
+
+                <h3 class="text-2xl font-bold mb-4">Educación</h3>
+                <div class="mb-6">
+                    <h4 class="text-xl font-semibold">Universidad Nacional Autónoma de México</h4>
+                    <p class="text-gray-600">Ingeniería en computación | Agosto 2019 – Actualidad</p>
+                    <p class="text-gray-700 mt-2">Cursos Relevantes:</p>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Seguridad Informática Avanzada</li>
+                        <li>Minería de Datos</li>
+                        <li>Computación Cuántica</li>
+                        <li>Inteligencia Artificial</li>
+                        <li>Redes de Datos Seguras</li>
+                        <li>Sistemas Distribuidos</li>
+                        <li>Compiladores</li>
+                        <li>Sistemas Operativos</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4">Idiomas</h3>
+                <ul class="list-disc pl-5 text-gray-700 mb-6">
+                    <li>Español: Nativo</li>
+                    <li>Inglés: Intermedio</li>
+                </ul>
+            </div>
+
+            <!-- Habilidades -->
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-bold mb-6">Habilidades Técnicas</h3>
+
+                <!-- Lenguajes de Programación -->
+                <div class="tech-category">
+                    <h4>
+                        <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif"
+                             alt="Coding">
+                        Lenguajes de Programación
+                    </h4>
+                    <div class="tech-container">
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java">
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="HTML">
+                            <span>HTML</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="CSS">
+                            <span>CSS</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg"
+                                 alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/microsoft_vb/microsoft_vb-icon.svg" alt="VBA">
+                            <span>VBA</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="SQL">
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases de Datos -->
+                <div class="tech-category">
+                    <h4>
+                        <i class="bi bi-database"></i>
+                        Bases de Datos
+                    </h4>
+                    <div class="tech-container">
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+                                 alt="PostgreSQL">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+                                 alt="SQL Server">
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas y Tecnologías -->
+                <div class="tech-category">
+                    <h4>
+                        <img src="https://www.svgrepo.com/show/354447/tools.svg" alt="Tools" style="width: 32px;">
+                        Herramientas y Tecnologías
+                    </h4>
+                    <div class="tech-container">
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker">
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Boot">
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"
+                                 alt="Bootstrap">
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/apache_tomcat/apache_tomcat-icon.svg"
+                                 alt="Tomcat">
+                            <span>Tomcat</span>
+                        </div>
+                        <div class="tech-icon">
+                            <img src="https://www.vectorlogo.zone/logos/google_ads/google_ads-icon.svg"
+                                 alt="Google Ads">
+                            <span>Google Ads</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Adicionales -->
+                <div class="mt-8">
+                    <h4 class="text-xl font-semibold mb-3">Skills Adicionales</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Capacidad de análisis y resolución de problemas.</li>
+                        <li>Experiencia en trabajo autónomo y en equipo.</li>
+                        <li>Adaptabilidad a entornos tecnológicos en evolución.</li>
+                        <li>Habilidad para aprender nuevas herramientas rápidamente.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Contacto -->
+<!-- Esta sección permite a los visitantes contactar al usuario -->
+<section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Contáctame</h2>
+
+        <div class="flex flex-col md:flex-row">
+            <!-- Información de contacto -->
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+                <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+
+                <div class="flex items-start mb-6">
+                    <div class="text-blue-500 mr-4">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Ubicación</h4>
+                        <p class="text-gray-700">Ecatepec de Morelos, Méx.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start mb-6">
+                    <div class="text-blue-500 mr-4">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Email</h4>
+                        <p class="text-gray-700"><a  href="mailto:ing.delacruz.carlosodette@gmail.com?subject=Contacto%20desde%20Software%20Odette">ing.delacruz.carlosodette@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="flex items-start mb-6">
+                    <div class="text-blue-500 mr-4">
+                        <i class="fas fa-phone text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Teléfono</h4>
+                        <p class="text-gray-700"><a href="tel:5660156828">5660156828</a></p>
+                    </div>
+                </div>
+
+                <div class="flex items-start mb-6">
+                    <div class="text-blue-500 mr-4">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/carlosodettedelacuzlopez/" target="_blank"
+                           class="text-blue-600 hover:underline">linkedin.com/in/carlosodettedelacuzlopez</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start mb-6">
+                    <div class="text-blue-500 mr-4">
+                        <i class="fab fa-github text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">GitHub</h4>
+                        <a href="https://github.com/CarlosOdetteDLCL080301" target="_blank"
+                           class="text-blue-600 hover:underline">github.com/CarlosOdetteDLCL080301</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-bold mb-6">Envíame un Mensaje</h3>
+
+                <!-- Formulario de contacto con validación básica mediante HTML -->
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                        <input type="text" id="subject" name="subject" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit"
+                                class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<!-- El pie de página contiene información de copyright y enlaces a redes sociales -->
+<footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-xl font-bold mb-2">Carlos Odette De La Cruz López</h3>
+                <p class="text-gray-400">Ingeniero en Computación</p>
+            </div>
+
+            <div class="flex space-x-4 mb-6 md:mb-0">
+                <a href="https://www.linkedin.com/in/carlosodettedelacuzlopez/" target="_blank"
+                   class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://github.com/CarlosOdetteDLCL080301" target="_blank"
+                   class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="mailto:ing.delacruz.carlosodette@gmail.com"
+                   class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2024 Carlos Odette De La Cruz López. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Script para el menú móvil y cursor personalizado -->
+<script>
+    // Este script controla la funcionalidad del menú móvil y el cursor personalizado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtenemos los elementos del DOM
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        // Elementos del cursor personalizado
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        // Función para alternar la visibilidad del menú móvil
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Evento para el botón de menú
+        menuToggle.addEventListener('click', toggleMenu);
+
+        // Eventos para los enlaces del menú móvil (cerrar al hacer clic)
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Manejo del formulario de contacto
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Aquí se puede agregar la lógica para enviar el formulario
+                // Por ahora, solo mostramos un mensaje de éxito
+                alert('¡Gracias por tu mensaje! Te contactaré pronto.');
+                contactForm.reset();
+            });
+        }
+
+        // Funcionalidad del cursor personalizado
+        document.addEventListener('mousemove', function(e) {
+            // Actualizar posición del cursor personalizado
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Aplicar posición con un pequeño retraso para el efecto de seguimiento
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // El contorno sigue con un pequeño retraso para crear efecto
+            setTimeout(() => {
+                cursorOutline.style.left = `${posX}px`;
+                cursorOutline.style.top = `${posY}px`;
+            }, 100);
+        });
+
+        // Efecto al hacer clic
+        document.addEventListener('mousedown', function() {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(0.7)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(0.7)';
+        });
+
+        document.addEventListener('mouseup', function() {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+        });
+
+        // Ocultar cursor nativo en elementos interactivos
+        const interactiveElements = document.querySelectorAll('a, button, input, textarea, select');
+        interactiveElements.forEach(el => {
+            el.style.cursor = 'none';
+        });
+
+        // Efecto hover para elementos interactivos
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                cursorDot.style.width = '12px';
+                cursorDot.style.height = '12px';
+                cursorDot.style.backgroundColor = 'var(--portfolio-secondary)';
+                cursorOutline.style.width = '50px';
+                cursorOutline.style.height = '50px';
+                cursorOutline.style.borderColor = 'var(--portfolio-accent)';
+            });
+
+            el.addEventListener('mouseleave', function() {
+                cursorDot.style.width = '8px';
+                cursorDot.style.height = '8px';
+                cursorDot.style.backgroundColor = 'var(--portfolio-accent)';
+                cursorOutline.style.width = '40px';
+                cursorOutline.style.height = '40px';
+                cursorOutline.style.borderColor = 'var(--portfolio-secondary)';
+            });
+        });
+    });
+</script>
+</body>
+</html>

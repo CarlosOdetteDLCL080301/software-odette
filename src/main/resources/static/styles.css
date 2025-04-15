@@ -1,0 +1,168 @@
+/* Variables CSS específicas para evitar conflictos */
+        :root {
+            --portfolio-primary: #0f172a;
+            --portfolio-secondary: #3b82f6;
+            --portfolio-accent: #f97316;
+            --portfolio-light: #f8fafc;
+            --portfolio-dark: #1e293b;
+        }
+
+        /* Estilos personalizados */
+        .portfolio-bg-primary {
+            background-color: var(--portfolio-primary);
+        }
+        .portfolio-text-primary {
+            color: var(--portfolio-primary);
+        }
+        .portfolio-bg-secondary {
+            background-color: var(--portfolio-secondary);
+        }
+        .portfolio-text-secondary {
+            color: var(--portfolio-secondary);
+        }
+        .portfolio-bg-accent {
+            background-color: var(--portfolio-accent);
+        }
+        .portfolio-text-accent {
+            color: var(--portfolio-accent);
+        }
+
+        /* Animación para la barra de navegación */
+        .portfolio-nav-link {
+            position: relative;
+        }
+        .portfolio-nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--portfolio-accent);
+            transition: width 0.3s ease;
+        }
+        .portfolio-nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Animación para las tarjetas de proyectos */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para la sección de habilidades */
+        .skill-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            border-radius: 9999px;
+            background-color: var(--portfolio-secondary);
+            color: white;
+            font-size: 0.875rem;
+        }
+
+        /* Estilos para los iconos de tecnologías */
+        .tech-icon {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-icon img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-icon span {
+            font-size: 0.75rem;
+            text-align: center;
+            color: var(--portfolio-dark);
+        }
+
+        /* Cursor personalizado */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--portfolio-accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--portfolio-secondary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, border-color 0.2s;
+        }
+
+        /* Ocultar cursor nativo en elementos interactivos */
+        a, button, input, textarea, select {
+            cursor: none;
+        }
+
+        /* Efecto hover para el cursor personalizado */
+        a:hover ~ .cursor-dot,
+        button:hover ~ .cursor-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--portfolio-secondary);
+        }
+
+        a:hover ~ .cursor-outline,
+        button:hover ~ .cursor-outline {
+            width: 50px;
+            height: 50px;
+            border-color: var(--portfolio-accent);
+        }
+
+        /* Animación de tecnologías */
+        .tech-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .tech-category {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        .tech-category h4 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--portfolio-primary);
+        }
+
+        .tech-category h4 img {
+            width: 32px;
+            margin-right: 0.5rem;
+        }

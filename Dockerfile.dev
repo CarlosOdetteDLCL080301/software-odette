@@ -1,0 +1,11 @@
+# Imagen base con Maven y JDK 21
+FROM maven:3.9.6-eclipse-temurin-21
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia todo el proyecto (incluye src, pom.xml, etc.)
+COPY . .
+
+# Instala dependencias y ejecuta en modo desarrollo
+CMD ["mvn", "spring-boot:run"]

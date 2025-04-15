@@ -5,22 +5,19 @@ services:
     image: postgres:15                 # Usa PostgreSQL 15 (estable)
     restart: always                    # Reinicia si falla
     environment:
-      # Nombre de la base de datos
       POSTGRES_DB: bd_web_software_odette
-      # Usuario y contraseña para conectar desde la app
       POSTGRES_USER: odette
       POSTGRES_PASSWORD: odette_password
-    volumes:
-      - db_data:/var/lib/postgresql/data  # Persistencia de datos
     ports:
-      - "5432:5432"                       # Mapea puerto local 5432
+      - "5432:5432"                    # Mapea puerto local 5432
 
   app:
-    build: .                           # Construye usando el Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile.dev       # Usamos el Dockerfile.dev para desarrollo
     depends_on:
       - db                            # Espera a que 'db' esté arriba
     environment:
-      # Variables que Spring Boot leerá para configurar la conexión
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/bd_web_software_odette
       SPRING_DATASOURCE_USERNAME: odette
       SPRING_DATASOURCE_PASSWORD: odette_password
@@ -28,8 +25,7 @@ services:
     ports:
       - "8080:8080"                   # Exponer la app en localhost:8080
     volumes:
-      - .:/app
-
+      - .:/app                        # Sincroniza la carpeta local con el contenedor
 
 volumes:
-  db_data: {}  # Volumen nombrado para PostgreSQL
+  db_data: {}  # Volumen nombrado para PostgreSQL, si se necesita para persistencia de datos

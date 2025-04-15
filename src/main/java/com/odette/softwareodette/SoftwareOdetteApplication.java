@@ -20,8 +20,8 @@ public class SoftwareOdetteApplication {
     public CommandLineRunner loadData(ItemRepository repo) {
         return args -> {
             // Guarda algunos items de ejemplo en la BD
-            repo.save(new Item(null, "Primer elemento"));
-            repo.save(new Item(null, "cansado elemento"));
+            repo.save(new Item(null, "Pri elemento"));
+            repo.save(new Item(null, "cans elemento"));
 
         };
     }
